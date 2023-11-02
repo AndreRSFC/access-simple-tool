@@ -1,0 +1,26 @@
+.toolsList {
+  list-style: none;
+  padding: 0;
+}
+
+.toolsList-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.toolsList-item-textContainer {
+  display: flex;
+  align-items: center;
+}
+
+.toolsList-item-icon {
+  max-width: 22px;
+  max-height: 22px;
+}
+
+.toolsList-item-text {
+  font-size: 16px !important;
+  margin-left: 10px;
+}

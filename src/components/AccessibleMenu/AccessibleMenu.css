@@ -1,0 +1,46 @@
+.accessibleMenu {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  background-color: #18191a;
+  max-width: 447px;
+  filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.5));
+  border-radius: 8px;
+  padding: 24px;
+  color: #fff;
+  z-index: 10000;
+  min-width: 300px;
+}
+
+.accessibleMenu-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.accessibleMenu-icon {
+  height: 40px;
+}
+
+.accessibleMenu-titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.accessibleMenu-title {
+  font-size: 22px !important;
+}
+
+.accessibleMenu-closeButton {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.accessibleMenu-subtitle {
+  font-size: 18px !important;
+  margin-bottom: 8px;
+  text-align: start;
+}
