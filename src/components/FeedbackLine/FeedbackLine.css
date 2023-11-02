@@ -1,0 +1,11 @@
+.feedbackLine {
+  display: flex;
+  align-items: center;
+  margin: 18px 0 22px;
+}
+
+.feedbackLine-text {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #fff;
+}

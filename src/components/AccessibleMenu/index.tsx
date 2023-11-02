@@ -1,4 +1,6 @@
 import AccessibleMenuList from "../AccessibleMenuList";
+import { Button } from "../Button";
+import FeedbackLine from "../FeedbackLine";
 import Close from "../Icons/Close";
 import "./AccessibleMenu.css";
 
@@ -15,6 +17,8 @@ const AccessibleMenu = () => {
         </button>
       </header>
       <AccessibleMenuList />
+      <FeedbackLine />
+      <Button>Limpar configuração</Button>
     </section>
   );
 };

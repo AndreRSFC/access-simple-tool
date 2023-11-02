@@ -3,6 +3,7 @@ import LetterHeight from "../components/Icons/LetterHeight";
 import LetterSpacing from "../components/Icons/LetterSpacing";
 import { FeatureList, InputType } from "../models/Feature";
 import { collorAdjustContrast, collorInvert } from "./collorFeatures";
+import { disableAllAnimations, increaseAllElementSizes, setScaleByPercentage } from "./generalFeatures";
 import {
   textIncreaseFontSizeByPercentage,
   textIncreaseLetterHeightByPercentage,
@@ -49,10 +50,36 @@ export const getInputs = (): FeatureList => {
         },
         {
           name: "Inverter cores:",
-          key: "collor-contrast",
+          key: "collor-invert",
           inputType: InputType.TOGGLE,
           icon: <LetterHeight className="toolsList-item-icon" />,
           featureFunction: collorInvert,
+        },
+      ],
+    },
+    {
+      groupName: "Outros",
+      content: [
+        {
+          name: "Zoom:",
+          key: "zoom",
+          inputType: InputType.INCREASE,
+          icon: <LetterHeight className="toolsList-item-icon" />,
+          featureFunction: setScaleByPercentage,
+        },
+        {
+          name: "Aumentar Elementos:",
+          key: "elements-increase",
+          inputType: InputType.INCREASE,
+          icon: <LetterHeight className="toolsList-item-icon" />,
+          featureFunction: increaseAllElementSizes,
+        },
+        {
+          name: "Desabilitar animações:",
+          key: "disable-animation",
+          inputType: InputType.TOGGLE,
+          icon: <LetterHeight className="toolsList-item-icon" />,
+          featureFunction: disableAllAnimations,
         },
       ],
     },

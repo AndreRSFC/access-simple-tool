@@ -10,7 +10,7 @@ const AccessibleMenuList = () => {
     <ul className="toolsList">
       {itens.map(({ groupName, content }) => {
         return (
-          <AccessibleMenuListItem groupName={groupName} content={content} />
+          <AccessibleMenuListItem groupName={groupName} content={content} key={groupName} />
         );
       })}
     </ul>
