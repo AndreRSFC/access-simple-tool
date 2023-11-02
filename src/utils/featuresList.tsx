@@ -2,7 +2,12 @@ import Capitalize from "../components/Icons/Capitalize";
 import LetterHeight from "../components/Icons/LetterHeight";
 import LetterSpacing from "../components/Icons/LetterSpacing";
 import { FeatureList, InputType } from "../models/Feature";
-import { textIncreaseFontSizeByPercentage, textIncreaseLetterHeightByPercentage, textIncreaseLetterSpacingByPercentage } from "./textFeatures";
+import { collorAdjustContrast, collorInvert } from "./collorFeatures";
+import {
+  textIncreaseFontSizeByPercentage,
+  textIncreaseLetterHeightByPercentage,
+  textIncreaseLetterSpacingByPercentage,
+} from "./textFeatures";
 
 export const getInputs = (): FeatureList => {
   return [
@@ -36,11 +41,18 @@ export const getInputs = (): FeatureList => {
       groupName: "Cores",
       content: [
         {
-          name: "Teste",
-          key: "collor-size",
+          name: "Aumentar contraste:",
+          key: "collor-contrast",
           inputType: InputType.TOGGLE,
           icon: <LetterHeight className="toolsList-item-icon" />,
-          featureFunction: () => {},
+          featureFunction: collorAdjustContrast,
+        },
+        {
+          name: "Inverter cores:",
+          key: "collor-contrast",
+          inputType: InputType.TOGGLE,
+          icon: <LetterHeight className="toolsList-item-icon" />,
+          featureFunction: collorInvert,
         },
       ],
     },

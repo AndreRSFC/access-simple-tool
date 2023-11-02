@@ -1,21 +1,28 @@
+import { useState } from "react";
 import "./SwitchToggle.css";
 
 interface SwitchToggleProps {
-  handleToggle?: () => void;
+  handleToggle: (checked: boolean) => void;
 }
 
 const SwitchToggle = ({ handleToggle }: SwitchToggleProps) => {
+  const [, setIsChecked] = useState(false);
   return (
     <label className="react-switch">
       <input
-        onChange={handleToggle}
+        onChange={() => {
+          setIsChecked((checked) => {
+            handleToggle(!checked);
+            return !checked
+          });
+        }}
         className="react-switch-checkbox"
         type="checkbox"
       />
       <div className="react-switch-button" />
       <div className="react-switch-labels">
-        <span>Sim</span>
         <span>Não</span>
+        <span>Sim</span>
       </div>
     </label>
   );
