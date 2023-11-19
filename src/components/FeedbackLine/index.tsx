@@ -8,7 +8,7 @@ const FeedbackLine = () => {
   
   return (
     <div className="feedbackLine">
-      <a href="" className="feedbackLine-text">
+      <a href="https://forms.gle/Jm5YmmeepmExDsBh7" target="_blank" className="feedbackLine-text">
         {t("GENERAL.FEEDBACK")}
       </a>
       <FeedbackIcon className="toolsList-item-icon" />

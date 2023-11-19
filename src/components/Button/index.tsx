@@ -1,5 +1,5 @@
 import './Button.css'
 
-export const Button = ({ children }) => {
-  return <button className="button">{children}</button>;
+export const Button: React.FC<any> = ({ children, ...props }) => {
+  return <button className="button" {...props}>{children}</button>;
 };

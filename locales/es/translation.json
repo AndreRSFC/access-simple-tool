@@ -3,7 +3,8 @@
     "CLEAR_CONFIG": "Limpiar Configuración",
     "MENU_TITLE": "Menú Accesible",
     "LANGUAGE": "Idioma del menú",
-    "FEEDBACK": "¡Deja tu opinión aquí!"
+    "FEEDBACK": "¡Deja tu opinión aquí!",
+    "OPEN_MENU": "Abrir menú"
   },
   "FONT_CONFIG": {
     "TITLE": "Fuentes",

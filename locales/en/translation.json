@@ -3,7 +3,8 @@
       "CLEAR_CONFIG": "Clear Configuration",
       "MENU_TITLE": "Accessible Menu",
       "LANGUAGE": "Menu language",
-      "FEEDBACK": "Give your feedback here!"
+      "FEEDBACK": "Give your feedback here!",
+      "OPEN_MENU": "Open Menu"
     },
     "FONT_CONFIG": {
       "TITLE": "Fonts",
