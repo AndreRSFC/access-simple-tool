@@ -44,3 +44,20 @@
   margin-bottom: 8px;
   text-align: start;
 }
+
+.accessibleMenu-open {
+  background-color: #18191a;
+  border: 0;
+  color: #fff;
+  display: flex;
+  width: 100%;
+  font-size: 32px;
+  max-height: 50px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accessibleMenu-open > svg {
+  width: 44px;
+  margin-right: 10px;
+}

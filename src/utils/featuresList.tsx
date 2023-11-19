@@ -1,36 +1,43 @@
+import { useTranslation } from "react-i18next";
 import Capitalize from "../components/Icons/Capitalize";
 import LetterHeight from "../components/Icons/LetterHeight";
 import LetterSpacing from "../components/Icons/LetterSpacing";
 import { FeatureList, InputType } from "../models/Feature";
 import { collorAdjustContrast, collorInvert } from "./collorFeatures";
-import { disableAllAnimations, increaseAllElementSizes, setScaleByPercentage } from "./generalFeatures";
+import {
+  disableAllAnimations,
+  increaseAllElementSizes,
+  setScaleByPercentage,
+} from "./generalFeatures";
 import {
   textIncreaseFontSizeByPercentage,
   textIncreaseLetterHeightByPercentage,
   textIncreaseLetterSpacingByPercentage,
 } from "./textFeatures";
 
-export const getInputs = (): FeatureList => {
+export const useGetInputs = (): FeatureList => {
+  const { t } = useTranslation();
+
   return [
     {
-      groupName: "Fonte",
+      groupName: t('FONT_CONFIG.TITLE'),
       content: [
         {
-          name: "Tamanho",
+          name: t('FONT_CONFIG.SIZE'),
           key: "font-size",
           inputType: InputType.INCREASE,
           icon: <Capitalize className="toolsList-item-icon" />,
           featureFunction: textIncreaseFontSizeByPercentage,
         },
         {
-          name: "Espaçamento",
+          name: t('FONT_CONFIG.SPACING'),
           key: "font-spacing",
           inputType: InputType.INCREASE,
           icon: <LetterSpacing className="toolsList-item-icon" />,
           featureFunction: textIncreaseLetterSpacingByPercentage,
         },
         {
-          name: "Altura da linha",
+          name: t('FONT_CONFIG.LINE_HEIGHT'),
           key: "font-line-height",
           inputType: InputType.INCREASE,
           icon: <LetterHeight className="toolsList-item-icon" />,
@@ -39,17 +46,17 @@ export const getInputs = (): FeatureList => {
       ],
     },
     {
-      groupName: "Cores",
+      groupName: t('COLOR_CONFIG.TITLE'),
       content: [
         {
-          name: "Aumentar contraste:",
+          name: t('COLOR_CONFIG.INCREASE_CONTRAST'),
           key: "collor-contrast",
           inputType: InputType.TOGGLE,
           icon: <LetterHeight className="toolsList-item-icon" />,
           featureFunction: collorAdjustContrast,
         },
         {
-          name: "Inverter cores:",
+          name: t('COLOR_CONFIG.INVERT_COLOR'),
           key: "collor-invert",
           inputType: InputType.TOGGLE,
           icon: <LetterHeight className="toolsList-item-icon" />,
@@ -58,24 +65,24 @@ export const getInputs = (): FeatureList => {
       ],
     },
     {
-      groupName: "Outros",
+      groupName: t('OTHER_CONFIG.TITLE'),
       content: [
         {
-          name: "Zoom:",
+          name: t('OTHER_CONFIG.ZOOM'),
           key: "zoom",
           inputType: InputType.INCREASE,
           icon: <LetterHeight className="toolsList-item-icon" />,
           featureFunction: setScaleByPercentage,
         },
         {
-          name: "Aumentar Elementos:",
+          name: t('OTHER_CONFIG.INCREASE_ELEMENTS'),
           key: "elements-increase",
           inputType: InputType.INCREASE,
           icon: <LetterHeight className="toolsList-item-icon" />,
           featureFunction: increaseAllElementSizes,
         },
         {
-          name: "Desabilitar animações:",
+          name: t('OTHER_CONFIG.DISABLE_ANIMATIONS'),
           key: "disable-animation",
           inputType: InputType.TOGGLE,
           icon: <LetterHeight className="toolsList-item-icon" />,

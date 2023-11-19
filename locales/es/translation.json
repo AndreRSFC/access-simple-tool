@@ -1,0 +1,26 @@
+{
+  "GENERAL": {
+    "CLEAR_CONFIG": "Limpiar Configuración",
+    "MENU_TITLE": "Menú Accesible",
+    "LANGUAGE": "Idioma del menú",
+    "FEEDBACK": "¡Deja tu opinión aquí!",
+    "OPEN_MENU": "Abrir menú"
+  },
+  "FONT_CONFIG": {
+    "TITLE": "Fuentes",
+    "SIZE": "Tamaño",
+    "SPACING": "Espaciado",
+    "LINE_HEIGHT": "Altura de Línea"
+  },
+  "COLOR_CONFIG": {
+    "TITLE": "Colores",
+    "INCREASE_CONTRAST": "Aumentar Contraste",
+    "INVERT_COLOR": "Invertir Colores"
+  },
+  "OTHER_CONFIG": {
+    "TITLE": "Otros",
+    "ZOOM": "Zoom",
+    "INCREASE_ELEMENTS": "Aumentar Elementos",
+    "DISABLE_ANIMATIONS": "Deshabilitar Animaciones"
+  }
+}
