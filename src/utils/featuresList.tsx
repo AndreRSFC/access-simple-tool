@@ -50,14 +50,14 @@ export const useGetInputs = (): FeatureList => {
       content: [
         {
           name: t('COLOR_CONFIG.INCREASE_CONTRAST'),
-          key: "collor-contrast",
+          key: "color-contrast",
           inputType: InputType.TOGGLE,
           icon: <LetterHeight className="toolsList-item-icon" />,
           featureFunction: collorAdjustContrast,
         },
         {
           name: t('COLOR_CONFIG.INVERT_COLOR'),
-          key: "collor-invert",
+          key: "color-invert",
           inputType: InputType.TOGGLE,
           icon: <LetterHeight className="toolsList-item-icon" />,
           featureFunction: collorInvert,

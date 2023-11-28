@@ -4,7 +4,9 @@
     "MENU_TITLE": "Menu acessivel",
     "LANGUAGE": "Idioma do menu",
     "FEEDBACK": "Dê seu feedback aqui!",
-    "OPEN_MENU": "Abrir menu"
+    "OPEN_MENU": "Abrir menu",
+    "YES": "Sim",
+    "NO": "Não"
   },
   "FONT_CONFIG": {
     "TITLE": "Fontes",

@@ -13,7 +13,7 @@ const AccessibleMenuListItem = ({ groupName, content }: FeatureGroup) => {
               {icon}
               <span className="toolsList-item-text">{name}</span>
             </div>
-            {inputType === InputType.INCREASE ? <CounterInput handleClik={featureFunction} /> : <SwitchToggle handleToggle={featureFunction} />}
+            {inputType === InputType.INCREASE ? <CounterInput handleClik={featureFunction} featureKey={key} /> : <SwitchToggle handleToggle={featureFunction} featureKey={key} />}
           </li>
         );
       })}

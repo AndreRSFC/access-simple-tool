@@ -4,7 +4,9 @@
     "MENU_TITLE": "Menú Accesible",
     "LANGUAGE": "Idioma del menú",
     "FEEDBACK": "¡Deja tu opinión aquí!",
-    "OPEN_MENU": "Abrir menú"
+    "OPEN_MENU": "Abrir menú",
+    "YES": "Sí",
+    "NO": "No"
   },
   "FONT_CONFIG": {
     "TITLE": "Fuentes",

@@ -1,38 +1,54 @@
 import { useState } from "react";
 
 import "./CounterInput.css";
+import {
+  useFeatures,
+  useFeaturesDispatch,
+} from "../../context/FeaturesContext";
 
 interface CounterInputProps {
   handleClik: (item: number) => void;
+  featureKey: string;
 }
 
-const CounterInput = ({ handleClik }: CounterInputProps) => {
-  const [value, setValue] = useState(0);
+const CounterInput = ({ handleClik, featureKey }: CounterInputProps) => {
+  const dispatch = useFeaturesDispatch();
+  const features = useFeatures();
 
   const handleIncrement = () => {
     handleClik(1);
-    setValue(value + 1);
+    if (features && dispatch) {
+      dispatch({
+        type: featureKey,
+        value: features[featureKey] + 1,
+      });
+    }
   };
 
   const handleDecrement = () => {
     handleClik(-1);
-    setValue(value - 1);
+    if (features && dispatch) {
+      dispatch({
+        type: featureKey,
+        value: features[featureKey] - 1,
+      });
+    }
   };
 
   return (
     <div className="counterInput">
       <button
         onClick={handleDecrement}
-        disabled={value === 0}
+        disabled={features?.[featureKey] === 0}
         className="counterInput-button"
       >
         -
       </button>
-      <div className="counterInput-display">{value} %</div>
+      <div className="counterInput-display">{features?.[featureKey]} %</div>
       <button
         onClick={handleIncrement}
         className="counterInput-button"
-        disabled={value === 70}
+        disabled={features?.[featureKey] === 70}
       >
         +
       </button>
