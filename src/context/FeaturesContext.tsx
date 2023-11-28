@@ -63,6 +63,14 @@ const FeaturesReducer = (Features: FeatureTypes, action: DispatchType) => {
       Features["disable-animation"] = action.value as boolean;
       return { ...Features };
     }
+    case "zoom": {
+      Features["zoom"] = action.value as number;
+      return { ...Features };
+    }
+    case "elements-increase": {
+      Features["elements-increase"] = action.value as number;
+      return { ...Features };
+    }
     default: {
       throw Error("Unknown action: " + action.type);
     }
