@@ -14,8 +14,8 @@ const setScaleByPercentage = (percentage: number) => {
   accessibleMenus.forEach((element) => {
     // Apply inverse scale to counteract the body scaling
     const inverseScale = 1 / currentScale;
-    element.style.transformOrigin = "0 0";
-    element.style.transform = `scale(${inverseScale})`;
+    (element  as HTMLDivElement).style.transformOrigin = "0 0";
+    (element  as HTMLDivElement).style.transform = `scale(${inverseScale})`;
   });
 };
 
@@ -38,8 +38,8 @@ const increaseAllElementSizes = (percentage: number) => {
       const newWidth = parseFloat(currentWidth) * (1 + percentage / 100);
       const newHeight = parseFloat(currentHeight) * (1 + percentage / 100);
 
-      element.style.width = `${newWidth}px`;
-      element.style.height = `${newHeight}px`;
+      (element  as HTMLDivElement).style.width = `${newWidth}px`;
+      (element  as HTMLDivElement).style.height = `${newHeight}px`;
     }
   });
 };
@@ -48,11 +48,11 @@ const disableAllAnimations = (enabled: boolean) => {
   const allElements = document.querySelectorAll("*");
   allElements.forEach((element) => {
     if (enabled) {
-      element.style.animation = "none";
-      element.style.transition = "none";
+      (element  as HTMLDivElement).style.animation = "none";
+      (element  as HTMLDivElement).style.transition = "none";
     } else {
-      element.style.animation = "";
-      element.style.transition = "";
+      (element  as HTMLDivElement).style.animation = "";
+      (element  as HTMLDivElement).style.transition = "";
     }
   });
 };

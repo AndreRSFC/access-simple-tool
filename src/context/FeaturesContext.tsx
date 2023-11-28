@@ -1,11 +1,14 @@
-import { createContext, useContext, useReducer } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Dispatch, createContext, useContext, useReducer } from "react";
 import { DispatchType, FeatureTypes, initialFeatures } from "./models";
 
-const FeaturesContext = createContext(null);
+const FeaturesContext = createContext(initialFeatures);
+const FeaturesDispatchContext = createContext((() => {}) as Dispatch<{
+  type: string;
+  value: number | boolean;
+}>);
 
-const FeaturesDispatchContext = createContext(null);
-
-const FeaturesProvider = ({ children }) => {
+const FeaturesProvider = ({ children }: { children: React.ReactNode }) => {
   const [Features, dispatch] = useReducer(FeaturesReducer, initialFeatures);
 
   return (

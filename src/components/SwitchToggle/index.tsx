@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./SwitchToggle.css";
 import {
   useFeatures,
@@ -19,7 +19,7 @@ const SwitchToggle = ({ handleToggle, featureKey }: SwitchToggleProps) => {
 
   useEffect(() => {
     if (features) {
-      handleToggle(features[featureKey]);
+      handleToggle(!!features[featureKey]);
     }
   }, [features, handleToggle, featureKey]);
 
@@ -36,7 +36,7 @@ const SwitchToggle = ({ handleToggle, featureKey }: SwitchToggleProps) => {
         }}
         className="react-switch-checkbox"
         type="checkbox"
-        checked={features?.[featureKey]}
+        checked={!!features?.[featureKey]}
       />
       <div className="react-switch-button" />
       <div className="react-switch-labels">

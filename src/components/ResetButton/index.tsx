@@ -9,7 +9,7 @@ const ResetButton = () => {
   return (
     <Button
       onClick={() => {
-        if (dispatch) dispatch({ type: "reset", value:'' });
+        if (dispatch) dispatch({ type: "reset", value: 0 });
       }}
     >
       {t("GENERAL.CLEAR_CONFIG")}

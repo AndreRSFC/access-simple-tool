@@ -1,12 +1,5 @@
 export interface FeatureTypes {
-  "font-size": number;
-  "font-spacing": number;
-  "font-line-height": number;
-  "color-contrast": boolean;
-  "color-invert": boolean;
-  zoom: number;
-  "elements-increase": number;
-  "disable-animation": boolean;
+  [key: string]: number | boolean;
 }
 
 export const initialFeatures: FeatureTypes = {

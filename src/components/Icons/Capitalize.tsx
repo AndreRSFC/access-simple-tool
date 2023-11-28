@@ -1,4 +1,6 @@
-const Capitalize = (props) => {
+import { SVGProps } from "react";
+
+const Capitalize = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
