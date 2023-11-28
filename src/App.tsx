@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
-import AccessibleMenu from './components/AccessibleMenu'
+import { AccessibleMenu } from "access-simple";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -32,7 +32,7 @@ function App() {
       </p>
       <AccessibleMenu />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
