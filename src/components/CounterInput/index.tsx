@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./CounterInput.css";
 import {
   useFeatures,
@@ -20,7 +18,7 @@ const CounterInput = ({ handleClik, featureKey }: CounterInputProps) => {
     if (features && dispatch) {
       dispatch({
         type: featureKey,
-        value: features[featureKey] + 1,
+        value: features[featureKey] as number + 1,
       });
     }
   };
@@ -30,7 +28,7 @@ const CounterInput = ({ handleClik, featureKey }: CounterInputProps) => {
     if (features && dispatch) {
       dispatch({
         type: featureKey,
-        value: features[featureKey] - 1,
+        value: features[featureKey] as number - 1,
       });
     }
   };

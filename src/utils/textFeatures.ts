@@ -19,7 +19,8 @@ const adjustCSSProperty = (
   const currentValueInPixels = parseFloat(currentPropertyValue) || 1;
   const newPropertyValueInPixels =
     currentValueInPixels * (1 + percentage / 100);
-  element.style[cssProperty] = `${newPropertyValueInPixels}px`;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (element  as HTMLDivElement).style[cssProperty as any] = `${newPropertyValueInPixels}px`;
 
   for (let child of element.children) {
     adjustCSSProperty(child, cssProperty, percentage, excludeClass);
