@@ -37,7 +37,8 @@ We welcome contributions! If you would like to contribute, please follow these s
 Your feedback is valuable to us. Please fill out this form to provide feedback: [Feedback Form](https://forms.gle/SEQ6XKLiS2GAXBtq9)
 
 ## License
-access-simple is available under the MIT License.
+
+MIT © [AndreRSFC](https://github.com/AndreRSFC)
 
 
 
