@@ -1,13 +1,23 @@
 {
   "name": "access-simple",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "license": "MIT",
-  "author": "",
-  "keywords": [],
+  "author": "André Simões <andrersfcosta@gmail.com> (https://andresimoes.dev/)",
   "main": "dist/access-simple.es.js",
   "files": [
     "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/AndreRSFC/access-simple-tool"
+  },
+  "homepage": "https://github.com/AndreRSFC/access-simple-tool#readme",
+  "keywords": [
+    "Accessibility",
+    "ReactJS",
+    "UI Customization",
+    "Multi-language",
+    "User Experience"
   ],
   "scripts": {
     "dev": "vite",
