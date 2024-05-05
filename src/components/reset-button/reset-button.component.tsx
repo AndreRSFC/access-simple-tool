@@ -1,20 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { useFeaturesDispatch } from "../../context/FeaturesContext";
-import { Button } from "../Button";
+import * as Styled from "./reset-button.style";
 
-const ResetButton = () => {
+export const ResetButton = () => {
   const dispatch = useFeaturesDispatch();
   const { t } = useTranslation();
 
   return (
-    <Button
+    <Styled.ResetButtonContainer
       onClick={() => {
         if (dispatch) dispatch({ type: "reset", value: 0 });
       }}
     >
       {t("GENERAL.CLEAR_CONFIG")}
-    </Button>
+    </Styled.ResetButtonContainer>
   );
 };
-
-export default ResetButton;

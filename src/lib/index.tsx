@@ -1,4 +1,3 @@
-import AccessibleMenu from "../components/AccessibleMenu";
-import './style.css'
+import { AccessibleMenu } from "../components/accessible-menu";
 
 export { AccessibleMenu };

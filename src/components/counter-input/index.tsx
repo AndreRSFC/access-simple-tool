@@ -1,0 +1,1 @@
+export { CounterInput } from './counter-input.component'

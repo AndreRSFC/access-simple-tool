@@ -1,17 +1,18 @@
 import { useEffect } from "react";
-import "./SwitchToggle.css";
 import {
   useFeatures,
   useFeaturesDispatch,
 } from "../../context/FeaturesContext";
 import { useTranslation } from "react-i18next";
 
+import * as Styled from './switch-toggle.style'
+
 interface SwitchToggleProps {
   handleToggle: (checked: boolean) => void;
   featureKey: string;
 }
 
-const SwitchToggle = ({ handleToggle, featureKey }: SwitchToggleProps) => {
+export const SwitchToggle = ({ handleToggle, featureKey }: SwitchToggleProps) => {
   const dispatch = useFeaturesDispatch();
   const features = useFeatures();
 
@@ -24,8 +25,8 @@ const SwitchToggle = ({ handleToggle, featureKey }: SwitchToggleProps) => {
   }, [features, handleToggle, featureKey]);
 
   return (
-    <label className="react-switch">
-      <input
+    <Styled.Switch>
+      <Styled.SwitchCheckbox
         onChange={() => {
           if (features && dispatch) {
             dispatch({
@@ -34,17 +35,14 @@ const SwitchToggle = ({ handleToggle, featureKey }: SwitchToggleProps) => {
             });
           }
         }}
-        className="react-switch-checkbox"
         type="checkbox"
         checked={!!features?.[featureKey]}
       />
-      <div className="react-switch-button" />
-      <div className="react-switch-labels">
+      <Styled.SwitchButton/>
+      <Styled.SwitchLabels>
         <span>{t("GENERAL.NO")}</span>
         <span>{t("GENERAL.YES")}</span>
-      </div>
-    </label>
+      </Styled.SwitchLabels>
+    </Styled.Switch>
   );
 };
-
-export default SwitchToggle;

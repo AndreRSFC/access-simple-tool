@@ -1,0 +1,1 @@
+export { SwitchToggle } from './switch-toggle.component'
