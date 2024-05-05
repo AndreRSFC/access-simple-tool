@@ -1,9 +1,12 @@
 
-import { Dispatch, createContext, useContext, useReducer } from "react";
-import { DispatchType, FeatureTypes, initialFeatures } from "./models";
+import React from "react";
+import type { Dispatch} from "react";
+import { createContext, useContext, useReducer } from "react";
+import type { DispatchType, FeatureTypes} from "./models";
+import { initialFeatures } from "./models";
 
 const FeaturesContext = createContext(initialFeatures);
-const FeaturesDispatchContext = createContext((() => { }) as Dispatch<{
+const FeaturesDispatchContext = createContext(({}) as Dispatch<{
   type: string;
   value: number | boolean;
 }>);
@@ -67,7 +70,7 @@ const FeaturesReducer = (Features: FeatureTypes, action: DispatchType) => {
       return { ...Features };
     }
     case "zoom": {
-      Features["zoom"] = action.value as number;
+      Features.zoom = action.value as number;
       return { ...Features };
     }
     case "elements-increase": {

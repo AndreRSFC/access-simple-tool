@@ -3,11 +3,12 @@ import i18n from "../../../i18n";
 import { useTranslation } from "react-i18next";
 import * as Styled from './language-settings.style'
 
+const changeLanguage = (language: string): void => {
+    i18n.changeLanguage(language);
+};
+
 export const LanguageSettings: React.FC = () => {
     const { t } = useTranslation();
-    const changeLanguage = (language: string) => {
-        i18n.changeLanguage(language);
-    };
 
     return (
         <Styled.LanguageSettingsContainer>

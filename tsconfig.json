@@ -32,6 +32,6 @@
     ],
     "types": ["node"]
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts", "pages/index.mdx"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts", "pages/index.mdx", "eslint.config.mjs"],
   "exclude": ["node_modules", "src/**/*.spec.ts", "src/**/*.test.ts"],
 }

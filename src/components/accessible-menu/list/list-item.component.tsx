@@ -1,4 +1,5 @@
-import { FeatureGroup, InputType } from "../../../models/Feature";
+import type { FeatureGroup} from "../../../models/Feature";
+import { InputType } from "../../../models/Feature";
 import { CounterInput } from "../../counter-input";
 import { SwitchToggle } from "../../switch-toggle";
 import * as Styled from './list-item.style'
