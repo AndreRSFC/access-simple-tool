@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { Dispatch, createContext, useContext, useReducer } from "react";
 import { DispatchType, FeatureTypes, initialFeatures } from "./models";
 
 const FeaturesContext = createContext(initialFeatures);
-const FeaturesDispatchContext = createContext((() => {}) as Dispatch<{
+const FeaturesDispatchContext = createContext((() => { }) as Dispatch<{
   type: string;
   value: number | boolean;
 }>);

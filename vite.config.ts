@@ -1,4 +1,6 @@
-// <reference types="vitest" />
+/// <reference types="vitest" />
+/// <reference types="vite-plugin-svgr/client" />
+
 import path from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -23,7 +25,8 @@ export default defineConfig({
     react(),
     svgr({
       svgrOptions: SVGR_OPTIONS
-    })
+    }),
+    typescript()
   ],
   build: {
     lib: {
@@ -39,6 +42,5 @@ export default defineConfig({
         }
       }
     }
-  },
-  plugins: [react(), typescript()]
+  }
 })

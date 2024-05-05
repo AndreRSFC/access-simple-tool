@@ -1,10 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { AccessibleMenuList } from "./list";
 import { FeedbackLine } from "../feedback";
-import Close from "../Icons/Close";
+import { Close, Accessibility } from "../../icons";
 import "../../../i18n";
 import { LanguageSettings } from "../language-settings";
-import AccessibilityIcon from "../Icons/Accessibility";
 import { useState } from "react";
 import { FeaturesProvider } from "../../context/FeaturesContext";
 import { ResetButton } from "../reset-button";
@@ -23,9 +22,7 @@ export const AccessibleMenu = () => {
                             <h1 className="title">
                                 {t("GENERAL.MENU_TITLE")}
                             </h1>
-                            <Styled.AcessibleMenuButtonClose
-
-                            >
+                            <Styled.AcessibleMenuButtonClose>
                                 <Close onClick={() => setOpenMenu(false)} />
                             </Styled.AcessibleMenuButtonClose>
                         </Styled.AcessibleMenuHeader>
@@ -38,7 +35,7 @@ export const AccessibleMenu = () => {
                     <Styled.AcessibleMenuButtonOpen
                         onClick={() => setOpenMenu(true)}
                     >
-                        <AccessibilityIcon />
+                        <Accessibility />
                         {t("GENERAL.OPEN_MENU")}
                     </Styled.AcessibleMenuButtonOpen>
                 )}
@@ -46,4 +43,3 @@ export const AccessibleMenu = () => {
         </FeaturesProvider>
     );
 };
-

@@ -22,7 +22,7 @@ const adjustCSSProperty = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (element  as HTMLDivElement).style[cssProperty as any] = `${newPropertyValueInPixels}px`;
 
-  for (let child of element.children) {
+  for (const child of element.children) {
     adjustCSSProperty(child, cssProperty, percentage, excludeClass);
   }
 };

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import FeedbackIcon from "../Icons/Feedback";
+import { Feedback } from "../../icons";
 import * as Styled from './feedback.style'
 
 export const FeedbackLine = () => {
@@ -11,7 +11,7 @@ export const FeedbackLine = () => {
                 {t("GENERAL.FEEDBACK")}
             </Styled.FeedbackLink>
             <Styled.FeedbackIcon>
-                <FeedbackIcon />
+                <Feedback />
             </Styled.FeedbackIcon>
         </Styled.FeedbackComponent>
     );
