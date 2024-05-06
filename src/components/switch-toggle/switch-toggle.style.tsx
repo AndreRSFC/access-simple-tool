@@ -11,12 +11,13 @@ export const Switch = styled('label', {
     color: '#000',
     fontSize: '12px',
 
-    '&:checked + .react-switch-button':{
+    ':checked + .react-switch-button':{
         left: 'calc(100% - 2px)',
         transform: 'translateX(-100%)',
+        color: 'red',
     },
 
-    '&:active + .react-switch-button':{
+    ':active + .react-switch-button':{
         width: '60px'
     }
 })

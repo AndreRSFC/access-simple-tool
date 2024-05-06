@@ -38,7 +38,7 @@ export const SwitchToggle = ({ handleToggle, featureKey }: SwitchToggleProps) =>
         type="checkbox"
         checked={!!features?.[featureKey]}
       />
-      <Styled.SwitchButton/>
+      <Styled.SwitchButton className="react-switch-button"/>
       <Styled.SwitchLabels>
         <span>{t("GENERAL.NO")}</span>
         <span>{t("GENERAL.YES")}</span>
