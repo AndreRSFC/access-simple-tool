@@ -29,10 +29,8 @@ jobs:
         run: npm clean-install
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
-      - name: Ensure script permissions
-        run: chmod +x ./publish.sh  # Grant execute permission to the script
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
-        run: ./publish.sh  # Execute the script
+        run: npx semantic-release
