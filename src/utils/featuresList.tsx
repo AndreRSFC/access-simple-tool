@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
-import Capitalize from "../components/Icons/Capitalize";
-import LetterHeight from "../components/Icons/LetterHeight";
-import LetterSpacing from "../components/Icons/LetterSpacing";
-import { FeatureList, InputType } from "../models/Feature";
+import { Capitalize, LetterHeight, LetterSpacing } from "../icons";
+import type { FeatureList} from "../models/Feature";
+import { InputType } from "../models/Feature";
 import { collorAdjustContrast, collorInvert } from "./collorFeatures";
 import {
   disableAllAnimations,

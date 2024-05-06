@@ -1,0 +1,1 @@
+export { AccessibleMenu } from './acessible-menu.container'
