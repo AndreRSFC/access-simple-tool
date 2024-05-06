@@ -11,7 +11,6 @@ const SVGR_OPTIONS = {
   ref: true,
   svgProps: {
     role: 'img',
-    fill: 'currentColor',
     className: 'cw-svg'
   }
 };

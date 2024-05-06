@@ -15,6 +15,7 @@ export const CounterInputDisplay = styled('div', {
     boxSizing: 'border-box',
     lineHeight: '1.2',
     fontSize: '16px',
+    textAlign: 'center'
 })
 
 export const CounterInputButton = styled('button', {
