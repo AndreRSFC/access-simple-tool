@@ -28,6 +28,9 @@ export default defineConfig({
     typescript()
   ],
   build: {
+    commonjsOptions: {
+      transformMixedEsModules: true
+    },
     lib: {
       entry: path.resolve(__dirname, 'src/lib/index.tsx'),
       name: 'access-simple',
