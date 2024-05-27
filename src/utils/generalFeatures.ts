@@ -2,6 +2,10 @@ let currentScale = 1;
 let currentPercentual = 0;
 
 const setScaleByPercentage = (percentage: number) => {
+  if (!document) {
+    return;
+  }
+
   currentScale = (100 + percentage + currentPercentual) / 100;
   currentPercentual += percentage;
 
@@ -20,6 +24,10 @@ const setScaleByPercentage = (percentage: number) => {
 };
 
 const increaseAllElementSizes = (percentage: number) => {
+  if (!document) {
+    return;
+  }
+
   // Select all elements except those with class 'accessibleMenu' and their children
   const allElements = document.querySelectorAll(
     "*:not(.accessibleMenu, .accessibleMenu *)"

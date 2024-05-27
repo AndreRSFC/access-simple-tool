@@ -1,14 +1,18 @@
 import { CssProprety } from "../models/Feature";
 
-const DOCUMENT_BODY = document.body;
+const DOCUMENT_BODY = null;
 const CLASS_TO_EXCLUDE = "accessibleMenu";
 
 const adjustCSSProperty = (
-  element: Element,
+  element: Element | null,
   cssProperty: string,
   percentage: number,
   excludeClass: string
 ) => {
+  if (!element) {
+    return
+  }
+
   if (element.classList.contains(excludeClass)) {
     return;
   }
@@ -20,7 +24,7 @@ const adjustCSSProperty = (
   const newPropertyValueInPixels =
     currentValueInPixels * (1 + percentage / 100);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (element  as HTMLDivElement).style[cssProperty as any] = `${newPropertyValueInPixels}px`;
+  (element as HTMLDivElement).style[cssProperty as any] = `${newPropertyValueInPixels}px`;
 
   for (const child of element.children as any) {
     adjustCSSProperty(child, cssProperty, percentage, excludeClass);
