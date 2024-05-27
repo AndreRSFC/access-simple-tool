@@ -1,4 +1,8 @@
 const collorAdjustContrast = (enabled: boolean) => {
+  if (!document) {
+    return;
+  }
+  
   const bodyElement = document.body;
 
   const percentual = enabled ? 50 : 0;
@@ -9,6 +13,9 @@ const collorAdjustContrast = (enabled: boolean) => {
 };
 
 const collorInvert = (enabled: boolean) => {
+  if (!document) {
+    return;
+  }
   const bodyElement = document.body;
   if (enabled) {
     bodyElement.style.filter = "invert(1)";
