@@ -4,7 +4,8 @@
   "description": "",
   "license": "MIT",
   "author": "André Simões <andrersfcosta@gmail.com> (https://andresimoes.dev/)",
-  "main": "dist/access-simple.es.js",
+  "main": "dist/access-simple.cjs.js",
+  "module": "dist/access-simple.esm.js",
   "files": [
     "dist"
   ],
@@ -87,12 +88,23 @@
       [
         "@semantic-release/npm",
         {
-          "pkgRoot": "dist"
+          "pkgRoot": "./dist"
         }
       ],
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      "@semantic-release/git"
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "README.md",
+            "CHANGELOG.md",
+            "dist/**/*.{js}"
+          ],
+          "message": "chore: Release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
     ]
   }
 }
